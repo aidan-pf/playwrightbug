@@ -1,9 +1,3 @@
-import asyncio
-import warnings
-import json
-import time
-import uvloop
-import urllib3
 from fastapi import Body, FastAPI, Request, Depends, HTTPException
 from shared import SharedStorage, init_browser
 from playwright_utility import Browser

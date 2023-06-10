@@ -1,7 +1,5 @@
 from playwright.async_api import async_playwright
-import asyncio
 from playwright.async_api import TimeoutError, Error
-import os
 
 
 class Browser():

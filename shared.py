@@ -1,4 +1,3 @@
-from fastapi import Depends
 from playwright_utility import Browser
 
 

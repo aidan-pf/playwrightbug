@@ -1,10 +1,6 @@
 # requests_utility.py
-import asyncio
-import random
-from shared import SharedStorage, init_browser
-import json
+from shared import SharedStorage
 from uuid import uuid4
-import traceback
 
 
 class Session:
@@ -36,7 +32,6 @@ class Session:
             Exception("Error browser not initialized")
         await self.get_session()
         return self
-    
+
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         await self.session.close()
-    
