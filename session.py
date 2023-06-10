@@ -5,17 +5,11 @@ from uuid import uuid4
 
 class Session:
     def __init__(self):
-        self.proxy = None
         self._id = uuid4()
-        self.update_location = None
 
     @property
     def _client(self):
         return self.session._client
-
-    @property
-    def default_headers(self):
-        return self.session._client._default_headers
 
     async def request(self, url):
         return await self.session.goto_url(url)
